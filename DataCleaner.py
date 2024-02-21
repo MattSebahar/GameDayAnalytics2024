@@ -29,7 +29,7 @@ def sentiment_score(line):
     return vs
 
 
-data_association = read_csv_to_dict_of_lists('Vader_data.csv')
+data_association = read_csv_to_dict_of_lists('csvFiles/VADER_data.csv')
 
 keys = []
 key_scores = {}
@@ -58,8 +58,8 @@ def create_csv1(csv_file_path):
 
 
 def create_csv2(csv_file_path):
-    ss = pd.read_csv('sentiment_scores.csv').filter(items=['Brand'])
-    qbr = pd.read_csv('Quarter and Brand Result.csv').filter(items=['brandname'])
+    ss = pd.read_csv('csvFiles/sentiment_scores.csv').filter(items=['Brand'])
+    qbr = pd.read_csv('csvFiles/Quarter and Brand Result.csv').filter(items=['brandname'])
 
     unique_brands = set()
 
@@ -70,7 +70,7 @@ def create_csv2(csv_file_path):
         if brand in unique_brands:
             unique_brands.remove(brand)
 
-    with open('sentiment_scores.csv', 'a', newline='') as csv_file:
+    with open('csvFiles/sentiment_scores.csv', 'a', newline='') as csv_file:
         writer = csv.writer(csv_file)
 
         for brand in unique_brands:
@@ -78,9 +78,9 @@ def create_csv2(csv_file_path):
 
 
 # Empty the file
-with open('sentiment_scores.csv', 'w') as csv_file:
+with open('csvFiles/sentiment_scores.csv', 'w') as csv_file:
     pass
 
 # Create the file
-create_csv1('sentiment_scores.csv')
-create_csv2('sentiment_scores.csv')
+create_csv1('csvFiles/sentiment_scores.csv')
+create_csv2('csvFiles/sentiment_scores.csv')
