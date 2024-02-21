@@ -1,7 +1,6 @@
 # main/GameDay
 
 
-
 ## Getting Started
 
 Download links:
@@ -16,16 +15,22 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-What things you need to install the software and how to install them.
+Install 
+-
+Pandas, Matplotlib, and Seaborn
 
-```
-Examples
-```
+Ex. File -> Settings -> Interpreter -> + -> Search & Install 
+
+Download 
+-
+final_tweets_corrected_2024 
+
+Ex. -> use any csv formatted X API dataset 
 
 ## Deployment
 
-Add additional notes about how to deploy this on a production system.
+NAN
 
 ## Resources
 
-Add links to external resources for this project, such as CI server, bug tracker, etc.
+NAN
